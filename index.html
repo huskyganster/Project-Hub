@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#090a12" />
+  <meta name="description" content="Huskyganster builds interactive websites, browser games, digital tools and experimental projects. Explore releases and upcoming work." />
+  <title>PROJECT//HUB — Huskyganster</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="projects.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div><div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <div class="nav container">
+      <a class="brand" href="#top" aria-label="Project Hub home"><span class="brand-mark">P<span class="brand-star">✦</span></span><span>PROJECT<span class="brand-slash">//</span>HUB</span></a>
+      <nav class="desktop-nav" aria-label="Main navigation"><a href="#projects">Projects</a><a href="#roadmap">Roadmap</a><a href="#about">About</a></nav>
+      <a class="nav-cta contact-link" href="https://discord.com/users/527464902399623186" data-discord-user="527464902399623186" target="_blank" rel="noopener noreferrer" aria-label="Contact Huskyganster on Discord">Contact <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main>
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-left">
+        <div class="eyebrow"><span class="pulse-dot"></span><span id="hero-status">WELCOME TO HUSKYGANSTER'S DIGITAL SPACE</span></div>
+        <h1 id="hero-title">Building websites.<br /><span class="gradient-text">Creating experiences.</span></h1>
+        <p class="hero-copy" id="hero-description">I'm Huskyganster, an independent creator building interactive websites, browser games, digital tools, and experimental projects. Explore what I've released, what I'm developing, and what's coming next.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#projects">Explore my projects <span aria-hidden="true">↗</span></a><a class="button button-ghost" href="#roadmap">View roadmap <span aria-hidden="true">→</span></a><a class="button button-contact contact-link" href="https://discord.com/users/527464902399623186" data-discord-user="527464902399623186" target="_blank" rel="noopener noreferrer" aria-label="Contact Huskyganster on Discord">Contact on Discord <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-meta"><span class="creator-mark" aria-hidden="true">//</span><span>INDEPENDENT DEVELOPER <span class="meta-divider">/</span> GAMES & INTERACTIVE EXPERIENCES</span></div>
+      </div>
+      <div class="hero-right" aria-label="Featured project">
+        <div class="hero-panel">
+          <div class="panel-top"><span class="window-controls" aria-hidden="true"><i></i><i></i><i></i></span><span class="panel-label">LATEST RELEASE / --</span><span class="panel-plus" aria-hidden="true">+</span></div>
+          <div class="feature-art is-empty" id="feature-art">
+            <div class="art-grid"></div><div class="art-glow"></div>
+            <div class="preview-frame" id="preview-frame"><img id="feature-image" alt="" hidden /><div class="preview-placeholder" id="preview-placeholder" aria-hidden="true"><span class="preview-crosshair">+</span><span class="preview-scan">NO SIGNAL <i>_</i></span><span class="preview-guide">PREVIEW WILL APPEAR AFTER FIRST RELEASE</span><span class="preview-corners"></span></div></div>
+            <span class="art-topleft">HUSKYGANSTER / RELEASE FEED</span><span class="art-bottomright" id="preview-footnote">AWAITING FIRST RELEASE_</span>
+          </div>
+          <div class="panel-bottom"><div><span class="micro-label">LATEST PUBLISHED WEBSITE</span><h2 id="feature-title">No websites published yet</h2><p id="feature-description">Your newest website will be featured here after you publish it.</p></div><a id="feature-link" class="round-arrow" href="#projects" aria-label="Explore projects" hidden>↗</a></div>
+        </div>
+        <div class="floating-label"><span class="small-sparkle">✳</span><span>HUSKYGANSTER / CREATIVE LAB</span></div>
+      </div>
+    </section>
+    <section class="stats container" aria-label="Project statistics"><div class="stat"><strong id="stat-total">00</strong><span>TOTAL PROJECTS</span></div><div class="stat"><strong id="stat-live">00</strong><span>LIVE & READY</span></div><div class="stat"><strong id="stat-progress">00</strong><span>IN DEVELOPMENT</span></div><div class="stat"><strong id="stat-upcoming">00</strong><span>COMING SOON</span></div></section>
+    <section class="projects-section container" id="projects" aria-labelledby="projects-title"><div class="section-heading"><div><p class="section-kicker"><span>// 01</span> THE COLLECTION</p><h2 id="projects-title">The project <em>archive.</em></h2><p>Everything I've shipped, everything I'm building, and everything that's next.</p></div><div class="heading-deco" aria-hidden="true">✳</div></div>
+      <div class="project-toolbar"><div class="filters" role="group" aria-label="Filter projects"><button type="button" class="filter active" data-filter="all" aria-pressed="true">All <span id="count-all">0</span></button><button type="button" class="filter" data-filter="live" aria-pressed="false">Live <span id="count-live">0</span></button><button type="button" class="filter" data-filter="development" aria-pressed="false">In progress <span id="count-development">0</span></button><button type="button" class="filter" data-filter="upcoming" aria-pressed="false">Coming soon <span id="count-upcoming">0</span></button></div><label class="search-field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><span class="sr-only">Search projects</span><input id="search" type="search" placeholder="Search projects..." autocomplete="off" /></label></div>
+      <div class="project-grid" id="project-grid" aria-live="polite"></div><div class="empty-state" id="empty-state" hidden><span>✳</span><h3 id="empty-title">No projects yet</h3><p id="empty-description">New projects will appear here soon. Stay tuned!</p><button type="button" class="button button-ghost" id="clear-filters">Reset filters</button></div>
+    </section>
+    <section class="roadmap-section" id="roadmap" aria-labelledby="roadmap-title"><div class="container roadmap-wrap"><div class="section-heading"><div><p class="section-kicker"><span>// 02</span> WHAT'S NEXT</p><h2 id="roadmap-title">On the <em>horizon.</em></h2><p>A look at the journey from idea to launch.</p></div></div><div class="timeline" id="roadmap-list"></div></div></section>
+    <section class="about-section container" id="about" aria-labelledby="about-title"><div class="about-card"><div class="about-decoration" aria-hidden="true">✳</div><div class="about-text"><p class="section-kicker"><span>// 03</span> BEHIND THE PIXELS</p><h2 id="about-title">Made by one person.<br /><span class="gradient-text">Built for everyone.</span></h2><p id="about-description">I'm Huskyganster. I make websites, playable experiments, and digital tools. This is my home for finished releases, works in progress, and the ideas still taking shape.</p><div class="about-links" id="social-links"></div></div><div class="about-visual" aria-hidden="true"><span class="about-ring ring-a"></span><span class="about-ring ring-b"></span><span class="about-symbol">✦</span><span class="about-corner">STAY CURIOUS_</span></div></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><a class="brand footer-brand" href="#top"><span class="brand-mark">P<span class="brand-star">✦</span></span><span>PROJECT<span class="brand-slash">//</span>HUB</span></a><span>© 2026 Huskyganster</span><a href="#top" class="back-to-top" id="back-to-top">Back to top ↑</a></div></footer>
+  <dialog id="project-modal" class="project-modal" aria-labelledby="modal-title"><div class="modal-wrap"><button id="modal-close" type="button" class="modal-close" aria-label="Close project details">×</button><div id="modal-content"></div></div></dialog>
+</body>
+</html>
