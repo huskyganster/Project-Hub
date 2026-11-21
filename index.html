@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#080c0e" />
+  <meta name="description" content="Huskyganster's Project Hub — an evolving archive of interactive websites, digital experiments and everything coming next." />
+  <meta property="og:title" content="PROJECT//HUB — Huskyganster" />
+  <meta property="og:description" content="Experiments made for the internet. Enter the archive." />
+  <title>PROJECT//HUB — Huskyganster</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="projects.js"></script>
+  <script defer src="script.js"></script>
+  <script defer src="boot.js"></script>
+</head>
+<body>
+  <!-- The boot sequence is a website animation, not a real OS crash, reboot, or executable download. -->
+  <div id="boot" class="boot" hidden aria-label="Interactive PROJECT HUB boot sequence">
+    <div id="terminal-screen" class="terminal-screen boot-screen">
+      <div class="terminal-topbar"><span>GNU/HUSKY TERMINAL <span class="term-version">v3.0</span></span><span class="terminal-top-status">SESSION: INTERACTIVE <span class="blink-square">■</span></span></div>
+      <div id="terminal-interaction" class="terminal-interaction" role="button" tabindex="0" aria-label="Press any key or tap to generate terminal code">
+        <pre class="terminal-code" id="terminal-code" aria-hidden="true"></pre><span class="terminal-cursor" id="terminal-cursor" aria-hidden="true">█</span>
+      </div>
+      <div class="terminal-bottom"><div class="terminal-commands"><span><mark>CTRL+H</mark> Help?</span><span><mark>CTRL+M</mark> Menu</span><span>HUSKYGANSTER</span></div><div id="terminal-progress">0% / MODULE IMPORT</div></div>
+      <div class="terminal-ready" id="terminal-ready" hidden><span>▸ IMPORT COMPLETE — READY TO EXECUTE</span><button class="terminal-execute" type="button" id="execute-button">PRESS ENTER / EXECUTE ↵</button></div>
+      <div id="idle-hint" class="idle-hint" role="status" aria-live="polite" hidden><div class="hint-title"><span class="hint-led"></span>SYSTEM MESSAGE <button type="button" id="hint-dismiss" aria-label="Dismiss instructions">×</button></div><p id="hint-copy">Press any key to begin importing PROJECT//HUB.</p><small>Input is simulated. No real commands are executed.</small></div>
+      <button type="button" class="mobile-tap" id="mobile-tap">TAP TO TYPE <span>↗</span></button>
+    </div>
+    <section class="loading-screen boot-screen" id="loading-screen" hidden aria-label="Executing project hub">
+      <div class="loader-micro">HUSKY // RUNTIME ENGINE <span>BOOT SEQUENCE ACTIVE</span></div>
+      <div class="loader-center"><div class="loader-symbol">//</div><p class="loader-prefix">EXECUTING PROCESS</p><h2>PROJECTHUB<span>.exe</span></h2><p id="loader-status">Locating project archive...</p><div class="loader-track"><div id="loader-fill"></div></div><div class="loader-numbers"><span>LOADING ENVIRONMENT</span><span id="loader-percent">0%</span></div><div id="loader-log" class="loader-log">&gt; preparing virtual environment...</div></div>
+      <div class="loader-foot">NO SOFTWARE IS BEING INSTALLED — THIS IS A WEBSITE EXPERIENCE</div>
+    </section>
+    <section class="crash-screen boot-screen" id="crash-screen" hidden aria-label="Fictional device crash animation"><div id="crash-content"></div></section>
+    <section class="reboot-screen boot-screen" id="reboot-screen" hidden aria-label="Fictional device reboot animation"><div id="reboot-content"></div></section>
+    <section class="success-screen boot-screen" id="success-screen" hidden><div class="success-lockup"><span>✓</span><p>PROJECTHUB.exe HAS BEEN INITIALIZED</p><h2>WELCOME TO THE <em>ARCHIVE.</em></h2></div></section>
+    <div id="boot-flash" class="boot-flash" aria-hidden="true"></div>
+    <div class="boot-fixed-controls"><span class="sim-label">PROJECT//HUB <span>·</span> INTERACTIVE SIMULATION</span><div class="boot-actions"><button id="boot-sound" type="button" aria-pressed="false" aria-label="Enable intro sound">SOUND OFF</button><button id="skip-boot" type="button">SKIP INTRO ↗</button></div></div>
+  </div>
+
+  <div id="site" class="site">
+    <canvas id="atmosphere" class="atmosphere" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="header" id="top">
+      <div class="header-inner layout">
+        <a class="logo" href="#top" aria-label="Project Hub home"><span class="logo-icon">H<span>G</span></span><span>HUSKYGANSTER<small>PROJECT//HUB</small></span></a>
+        <nav class="nav" aria-label="Primary navigation"><a href="#work">THE WORK <sup>01</sup></a><a href="#roadmap">ROADMAP <sup>02</sup></a><a href="#about">ABOUT <sup>03</sup></a></nav>
+        <a class="header-contact discord-link" data-discord-user="527464902399623186" href="https://discord.com/users/527464902399623186" target="_blank" rel="noopener noreferrer">CONTACT <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero layout" aria-labelledby="hero-heading">
+        <div class="hero-ambient" aria-hidden="true"><div class="orb orb-main"></div><div class="orb orb-small"></div><div class="orb-ring ring-one"></div><div class="orb-ring ring-two"></div></div>
+        <div class="hero-topnote"><span class="status-led"></span> DIGITAL WORKS / ACTIVE TRANSMISSION <span class="hero-index">ISSUE 001 — <span id="issue-year">2026</span></span></div>
+        <div class="hero-content">
+          <div class="hero-overline">INDEPENDENT CREATIVE PROJECT ARCHIVE <span>↘</span></div>
+          <h1 id="hero-heading"><span class="line-clip"><span>NOT JUST</span></span><span class="line-clip"><span class="outline-word">WEBSITES<span class="hero-dot">.</span></span></span></h1>
+          <div class="hero-intro-line"><div class="hero-cross" aria-hidden="true">✳</div><p>I'm <strong>Huskyganster.</strong> I build interactive websites, browser experiments and digital experiences worth exploring. Here's what I've launched — and what comes next.</p></div>
+          <div class="hero-actions"><a href="#work" class="action action-primary">EXPLORE THE ARCHIVE <span>↗</span></a><a href="#roadmap" class="action action-secondary">WHAT'S NEXT <span>↘</span></a></div>
+        </div>
+        <div class="hero-bottomline"><span>SCROLL TO ENTER THE COLLECTION <span class="scroll-arrow">↓</span></span><span class="coordinates">EST. 2026 &nbsp; / &nbsp; WWW.HUSKYGANSTER</span></div>
+      </section>
+
+      <div class="ticker" aria-label="Websites, games, experiments and interactive projects"><div class="ticker-track" aria-hidden="true"><span>WEBSITES</span><b>✳</b><span>EXPERIMENTS</span><b>✳</b><span>INTERACTIVE WORLDS</span><b>✳</b><span>GAMES</span><b>✳</b><span>WEBSITES</span><b>✳</b><span>EXPERIMENTS</span><b>✳</b><span>INTERACTIVE WORLDS</span><b>✳</b><span>GAMES</span><b>✳</b></div></div>
+
+      <section id="work" class="work-section layout" aria-labelledby="work-title">
+        <div class="section-top reveal"><span class="chapter">01 / SELECTED WORK</span><span class="section-rule"></span><span class="micro-note">CURRENTLY INDEXING THE INTERNET</span></div>
+        <div class="heading-row reveal"><h2 id="work-title">THE <em>ARCHIVE.</em></h2><p>A growing collection of sites, experiments and ideas — live, in progress, and on the horizon.</p></div>
+
+        <div class="feature-layout reveal" id="feature-layout">
+          <div class="feature-copy"><div class="feature-overline"><span class="live-indicator"></span><span>FEATURED RELEASE / <span id="feature-label">001</span></span></div><h3 id="feature-title">The Red Button</h3><p id="feature-desc">One button. Every click makes it grow. See how far you can take it.</p><div class="feature-meta"><span id="feature-category">BROWSER GAME</span><span id="feature-date">2026</span></div><a id="feature-action" class="feature-action" href="https://huskyganster.github.io/The-Red-Button/" target="_blank" rel="noopener noreferrer">ENTER EXPERIENCE <span>↗</span></a></div>
+          <a id="feature-image-link" class="feature-image-link" href="https://huskyganster.github.io/The-Red-Button/" target="_blank" rel="noopener noreferrer" aria-label="Open latest website"><div class="feature-visual"><div class="mock-browser-top"><div class="browser-dots"><i></i><i></i><i></i></div><span id="feature-domain">HUSKYGANSTER.GITHUB.IO</span><span>↗</span></div><div class="feature-image-stage"><img id="feature-image" src="images/RedButton.png" alt="Screenshot of The Red Button website, with a bright red button on a dark background" /><div class="feature-overlay"><span>LIVE PREVIEW / 001</span><span class="preview-expand">↗</span></div></div></div></a>
+        </div>
+        <div class="work-divider"><span>ALL PROJECTS</span><span id="item-count">001 ITEMS IN THE ARCHIVE</span></div>
+        <div class="browser-controls"><div class="filters" role="group" aria-label="Filter by project status"><button class="filter active" data-filter="all" aria-pressed="true">ALL <span id="count-all">01</span></button><button class="filter" data-filter="live" aria-pressed="false">LIVE <span id="count-live">01</span></button><button class="filter" data-filter="development" aria-pressed="false">BUILDING <span id="count-development">00</span></button><button class="filter" data-filter="upcoming" aria-pressed="false">UPCOMING <span id="count-upcoming">00</span></button></div><label class="search"><span>⌕</span><span class="sr-only">Search projects</span><input id="search" type="search" placeholder="SEARCH THE ARCHIVE" autocomplete="off" /></label></div>
+        <div id="project-grid" class="project-grid" aria-live="polite"></div>
+        <div id="empty-state" class="empty-state" hidden><span>NO SIGNAL / 000</span><h3 id="empty-title">NOTHING HERE YET.</h3><p id="empty-description">This part of the archive is still waiting to be filled.</p><button id="clear-filters" class="text-link" type="button">RESET FILTERS ↗</button></div>
+      </section>
+
+      <section id="roadmap" class="roadmap-section" aria-labelledby="roadmap-title"><div class="layout"><div class="section-top reveal"><span class="chapter">02 / THE FUTURE</span><span class="section-rule"></span><span class="micro-note">CURRENT DEVELOPMENT FEED</span></div><div class="heading-row reveal"><h2 id="roadmap-title">NEXT <em>IN LINE.</em></h2><p>Ideas take shape here before becoming something you can actually use.</p></div><div id="roadmap-list" class="roadmap-list"></div></div></section>
+
+      <section id="about" class="about-section layout" aria-labelledby="about-title"><div class="about-container reveal"><div class="about-left"><span class="chapter">03 / THE CREATOR</span><h2 id="about-title">MADE TO <em>BE CLICKED.</em></h2><p id="about-description">I'm Huskyganster. I create websites, browser games, digital tools and unusual interactive experiments. This is the home for everything I've shipped and everything I'm still imagining.</p><a class="action action-primary discord-link" data-discord-user="527464902399623186" href="https://discord.com/users/527464902399623186" target="_blank" rel="noopener noreferrer">CONTACT ON DISCORD <span>↗</span></a></div><div class="about-monogram" aria-hidden="true"><div class="about-circle">HG<span>✳</span></div><span class="about-serial">DESIGNED / DEVELOPED / RELEASED</span></div></div></section>
+    </main>
+
+    <footer class="footer"><div class="layout footer-inner"><span>© 2026 HUSKYGANSTER</span><span class="footer-center">INDEPENDENTLY MADE FOR THE INTERNET</span><div class="footer-actions"><button id="replay-boot" type="button">REPLAY INTRO ↺</button><a id="back-to-top" href="#top">BACK TO TOP ↑</a></div></div></footer>
+  </div>
+
+  <dialog id="project-modal" class="project-modal" aria-labelledby="modal-title"><div class="modal-container"><button class="modal-close" id="modal-close" type="button" aria-label="Close project details">×</button><div id="modal-content"></div></div></dialog>
+</body>
+</html>
